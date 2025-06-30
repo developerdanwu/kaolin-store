@@ -4,6 +4,7 @@ loadEnv(process.env.NODE_ENV || "development", process.cwd());
 
 module.exports = defineConfig({
   admin: {
+    backendUrl: process.env.MEDUSA_BACKEND_URL,
     disable: process.env.DISABLE_MEDUSA_ADMIN === "true",
   },
   projectConfig: {
