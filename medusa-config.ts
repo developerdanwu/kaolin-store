@@ -25,27 +25,27 @@ module.exports = defineConfig({
               // other options...
             },
           },
-          {
-            resolve: "@medusajs/medusa/cache-redis",
-            options: {
-              redisUrl: process.env.REDIS_URL,
-            },
-          },
-          {
-            resolve: "@medusajs/medusa/event-bus-redis",
-            options: {
-              redisUrl: process.env.REDIS_URL,
-            },
-          },
-          {
-            resolve: "@medusajs/medusa/workflow-engine-redis",
-            options: {
-              redis: {
-                url: process.env.REDIS_URL,
-              },
-            },
-          },
         ],
+      },
+    },
+    {
+      resolve: "@medusajs/medusa/cache-redis",
+      options: {
+        redisUrl: process.env.REDIS_URL,
+      },
+    },
+    {
+      resolve: "@medusajs/medusa/event-bus-redis",
+      options: {
+        redisUrl: process.env.REDIS_URL,
+      },
+    },
+    {
+      resolve: "@medusajs/medusa/workflow-engine-redis",
+      options: {
+        redis: {
+          url: process.env.REDIS_URL,
+        },
       },
     },
   ],
